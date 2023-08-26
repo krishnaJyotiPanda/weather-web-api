@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      body {
+        background-image: url(https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg?w=740&t=st=1661788724~exp=1661789324~hmac=84c590605be828b3ccf326d2b702b6bf77d2a85d19adcd086550daea1f11ad85);
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+      }
+
+      .main {
+        margin: 10%;
+      }
+
+      .lead2 {
+        margin: 2%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="data:image/jpeg;base64,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"
+              height="50px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="main">
+      <h1 class="heading">Find The Weather Of Your Location.</h1>
+      <p class="lead">
+        Weather smooth and easy to use web app which helps you find the weather
+        of any desired location including your own location with a single click.
+        Try it for yourself. click the below button and enter the world of
+        weather.
+      </p>
+      <p class="lead2">
+        <a
+          href="homepage.html"
+          class="btn btn-lg btn-primary fw-bold border-black"
+          style="color: black"
+          >Find Weather</a
+        >
+      </p>
+    </section>
+  </body>
+</html>
